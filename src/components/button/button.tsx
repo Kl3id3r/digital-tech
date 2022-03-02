@@ -2,7 +2,7 @@
 import React from "react";
 
 // @Types
-import { IButtonProps } from "../types/IButtonProps";
+import { IButtonProps } from "../../types/IButtonProps";
 
 export default function Button({ type = "button", children }: IButtonProps) {
   return (
