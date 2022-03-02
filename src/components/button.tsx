@@ -1,11 +1,13 @@
+// @Vendors
 import React from "react";
 
-export default function Button({
-  type = "button",
-  children,
-}: {
-  type: "button" | "submit" | "reset" | undefined;
-  children: JSX.Element;
-}) {
-  return <button type={type}>{children}</button>;
+// @Types
+import { IButtonProps } from "../types/IButtonProps";
+
+export default function Button({ type = "button", children }: IButtonProps) {
+  return (
+    <button className="btn px-7 py-3 bg-black text-gray rounded" type={type}>
+      {children}
+    </button>
+  );
 }

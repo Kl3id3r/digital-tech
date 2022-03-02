@@ -1,7 +1,16 @@
+// @Styles
 import "./App.css";
 
+// @Components
+import Button from "./components/button";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Digial tech!</h1>;
+  return (
+    <div>
+      <h2>Digital Tech</h2>
+      <Button>Click</Button>
+    </div>
+  );
 }
 
 export default App;
