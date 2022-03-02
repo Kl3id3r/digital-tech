@@ -7,6 +7,7 @@
  * @param avatar: {string} Url de la imagen que representa al usuario (opcional)
  */
 export interface IUser {
+  _id: string;
   name: string;
   username: string;
   surname: string;

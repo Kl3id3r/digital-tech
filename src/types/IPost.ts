@@ -16,6 +16,7 @@ import { IUser } from "./IUser";
  * @param likes: {IUser[]}  Lista de usuarios a los que les ha gustado la publicación(opcional).
  */
 export interface IPost {
+  _id: string;
   author: IUser;
   create_at: Date;
   message: string;
