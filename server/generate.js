@@ -9,7 +9,7 @@ let database = {
 
 // Usuario inicial
 const author = {
-  _id: "1",
+  id: 1,
   name: "Johnn",
   surname: "J0hnn",
   username: "jhon@doe.com",
@@ -20,9 +20,9 @@ const author = {
 database.users.push(author);
 
 // Crear los primero 5 posts del usuario "author"
-for (let i = 0; i < 6; i++) {
+for (let id = 0; id < 6; id++) {
   database.posts.push({
-    _id: i.toString(),
+    id,
     author,
     create_at: new Date(),
     message: "string",

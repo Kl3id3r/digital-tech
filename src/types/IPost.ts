@@ -6,7 +6,7 @@ import { IUser } from "./IUser";
 
 /**
  * Interfaz para post individual
- * @method IPost
+ * @method interface IPost
  * @param author: {IUser} Usuario creador de la publicación
  * @param create_at: {Date} Fecha de creación de la publicación
  * @param message: {string} Texto a compartir o pie de la imagen
