@@ -1,15 +1,12 @@
 # DIGITAL TECH
 
-
-
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `yarn generate`
 
-Ejecuta un servidor de Nodejs para generar datos de prueba con **Faker y genera un archivo **database.json en el directorio > /server
-
+Ejecuta un servidor de Nodejs para generar datos de prueba con **Faker** y genera un archivo **database.json** en el directorio **/server**
 
 ### `yarn start`
 
