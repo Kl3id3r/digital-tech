@@ -8,6 +8,9 @@ In the project directory, you can run:
 
 Ejecuta un servidor de Nodejs para generar datos de prueba con **Faker** y genera un archivo **database.json** en el directorio **/server**
 
+### `yarn dev`
+Levantar servidor con **concurrently** y levantar front
+
 ### `yarn start`
 
 Runs the app in the development mode.\
