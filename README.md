@@ -8,8 +8,8 @@ In the project directory, you can run:
 
 Ejecuta un servidor de Nodejs para generar datos de prueba con **Faker** y genera un archivo **database.json** en el directorio **/server**
 
-### `yarn dev` \
-Levantar [Servidor json-server](http://localhost:8000) en el puerto **8000** con **concurrently** y [http://localhost:3000](Levantar front)
+### `yarn dev`
+Levantar [Servidor json-server](http://localhost:8000) en el puerto **8000** con **concurrently** y [Levantar front](http://localhost:3000)
 
 ### `yarn start`
 
