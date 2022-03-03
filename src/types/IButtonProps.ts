@@ -1,3 +1,5 @@
+import React from "react";
+
 /**
  * Interfaz para listado de posts
  * @method interface IButtonProps
@@ -7,4 +9,5 @@
 export interface IButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
   children?: JSX.Element | string;
+  onClick?: any;
 }

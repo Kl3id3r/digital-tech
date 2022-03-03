@@ -2,7 +2,7 @@
 import jwt from "jsonwebtoken";
 
 import API from "./api";
-import { RequestOptionsType } from "../types/api";
+import { RequestOptionsType } from "../types/IApi";
 
 // Utils
 import { removeItemLocal, searchItemLocal } from "../utils";

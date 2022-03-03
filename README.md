@@ -1,10 +1,15 @@
-# Getting Started with Create React App
+# DIGITAL TECH
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn generate`
+
+Ejecuta un servidor de Nodejs para generar datos de prueba con **Faker y genera un archivo **database.json en el directorio > /server
+
 
 ### `yarn start`
 
