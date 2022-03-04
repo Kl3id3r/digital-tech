@@ -13,6 +13,6 @@ import { IRequestState } from "./IRequestState";
 
 export interface IAuth {
   isAuthenticated: boolean;
-  user: IUser | IRequestState;
+  user: IUser;
   login: IRequestState;
 }

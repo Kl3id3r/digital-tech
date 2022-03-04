@@ -1,5 +1,5 @@
 // @Vendors
-import React from "react";
+import React, { useEffect } from "react";
 import { saveAs } from "file-saver";
 
 // @Styles
@@ -7,8 +7,12 @@ import "./App.css";
 
 // @Components
 import Button from "./components/button/button";
+import { useDispatch } from "react-redux";
+import { browserReload } from "./reducers/authSlice";
 
 function App() {
+  const dispatch = useDispatch();
+
   // Palabra de busqueda
   const [keyword, setKeyword] = React.useState("");
 
@@ -42,6 +46,10 @@ function App() {
     const value = (target as HTMLInputElement).value;
     setKeyword(value);
   };
+
+  useEffect(() => {
+    dispatch(browserReload());
+  }, [dispatch]);
 
   return (
     <div>

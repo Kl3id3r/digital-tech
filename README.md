@@ -2,6 +2,9 @@
 
 ## Deployment
 [https://digital-tech.vercel.app/](https://digital-tech.vercel.app)
+
+## Figma Design
+[Link aquí](https://www.figma.com/file/40jJYwa4itHKis00ej5kOZ/Untitled?node-id=0%3A1)
 ## Available Scripts
 
 In the project directory, you can run:

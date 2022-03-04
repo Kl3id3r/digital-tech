@@ -1,5 +1,5 @@
 // @Vendors
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 
 import {
   createAsyncThunk,
@@ -8,9 +8,9 @@ import {
 } from "@reduxjs/toolkit";
 
 // @Types
-import { IAuth } from "src/types/IAuth";
-import { IUser } from "src/types/IUser";
-import { IAction } from "src/types/IAction";
+import { IAuth } from "../types/IAuth";
+import { IUser } from "../types/IUser";
+import { IAction } from "../types/IAction";
 
 import { LOCAL_KEY } from "../config/contants";
 // import { Login } from "api/requests/AuthRequest";
@@ -28,10 +28,6 @@ const initialState: IAuth = {
     username: "",
     surname: "",
     avatar: "",
-    loading: false,
-    errorMessage: null,
-    serverErrors: false,
-    success: false,
   },
   login: {
     loading: false,
@@ -74,16 +70,21 @@ export const fetchAuthLogout = createAsyncThunk(`${PREFIX}/logout`, () =>
  */
 export const browserReload = createAsyncThunk(`${PREFIX}/browserReload`, () => {
   const access_app = searchItemLocal(LOCAL_KEY);
-  const token: any = jwt.decode(
-    (access_app as { access_token: string })?.access_token
-  );
 
-  // Verificar tiempo de expiración en milisegundos para finalizar la sesión
-  if (token?.exp * 1000 < Date.now()) {
-    removeItemLocal(LOCAL_KEY);
-    throw Error(`Sesión expirada`);
+  // console.log(jwt);
+  if (access_app) {
+    
+    // const token: any = jwt.decode(
+    //   (access_app as { access_token: string })?.access_token
+    // );
+    // Verificar tiempo de expiración en milisegundos para finalizar la sesión
+    // if (token?.exp * 1000 < Date.now()) {
+    //   removeItemLocal(LOCAL_KEY);
+    //   throw Error(`Sesión expirada`);
+    // }
+    return access_app;
   }
-  return access_app;
+  throw Error(`Sesión expirada`);
 });
 
 /**
@@ -117,16 +118,16 @@ export const authSlice = createSlice({
         state.login.loading = false;
         state.isAuthenticated = false;
         state.user = initialState.user;
-      })
-
-      .addCase(browserReload.rejected, (state) => {
-        state.login.loading = false;
-        state.isAuthenticated = false;
-      })
-      .addCase(browserReload.fulfilled, (state, action: IAction) => {
-        state.login.loading = false;
-        state.isAuthenticated = action.payload ? true : false;
       });
+
+    // .addCase(browserReload.rejected, (state) => {
+    //   state.login.loading = false;
+    //   state.isAuthenticated = false;
+    // })
+    // .addCase(browserReload.fulfilled, (state, action: IAction) => {
+    //   state.login.loading = false;
+    //   state.isAuthenticated = action.payload ? true : false;
+    // });
   },
 });
 

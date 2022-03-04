@@ -1,12 +1,12 @@
 // @Types
-import { IRoute } from "src/types/IRoute";
+import { IRoute } from "../types/IRoute";
 
 // @Views - @Components
 
 // @Prefix
 export const PREFIX_LOGIN = "/login"; // Pantalla iniciar sesión
 export const PREFIX_DASHBOARD = "/dashboard"; // Pantalla principal
-export const PREFIX_PERFIL = "/perfil"; // Pantalla principal
+export const PREFIX_PERFIL = "/perfil"; // Pantalla principal del perfil
 
 export const navigation: IRoute[] = [
   {
