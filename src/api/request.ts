@@ -1,36 +1,14 @@
-// Vendors
-import jwt from "jsonwebtoken";
-
+// @Api
 import API from "./api";
 import { RequestOptionsType } from "../types/IApi";
 
-// Utils
-import { removeItemLocal, searchItemLocal } from "../utils";
-
-// State
-// import { expiredAuth } from "reducers/authSlice";
-import { store } from "../store";
-
-const localKey = "pandora_access_token";
-
 /**
  * Obtener headers
+ * @function getHeaders
  * @param authRequired boolean
  * @returns headers
  */
 const getHeaders = (authRequired: boolean) => {
-  if (authRequired) {
-    const token: { access_token: string } = searchItemLocal(localKey) as {
-      access_token: string;
-    };
-    const access_token: any = jwt.decode(token.access_token);
-
-    if (access_token?.exp * 1000 < Date.now()) {
-      // store.dispatch(expiredAuth());
-      return removeItemLocal(localKey) as {};
-    }
-    return token ? { Authorization: `Bearer ${token.access_token}` } : {};
-  }
   return {};
 };
 
@@ -67,7 +45,7 @@ export const request = async <T = any>(
       headers: { ...getHeaders(authRequire), ...headers },
     });
 
-    return { data: response.data, error: false };
+    return { data: (response as any).data, error: false };
   } catch (error: any) {
     if (error.response) {
       return {

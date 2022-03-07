@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,20 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
-    "basePath":"../",
-"files": [
-  "node_modules/zone.js/dist/zone.js",
-  "node_modules/zone.js/dist/long-stack-trace-zone.js",
-  "node_modules/zone.js/dist/proxy.js",
-  "node_modules/zone.js/dist/sync-test.js",
-  "node_modules/zone.js/dist/jasmine-patch.js",
-  "node_modules/zone.js/dist/async-test.js",
-  "node_modules/zone.js/dist/fake-async-test.js",
-]
+    "baseUrl": "src"
   },
-  "include": [
-    "src"
-  ],
-
+  "include": ["src/**/*"]
 }

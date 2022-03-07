@@ -2,7 +2,7 @@
  * Obtener item del localStorage (Almacenamiento local)
  * @function searchItemLocal
  * @param key: string
- * @returns Item: any | null
+ * @returns unknown
  */
 export const searchItemLocal = (key: string): unknown => {
   const item = localStorage.getItem(key);
@@ -14,7 +14,7 @@ export const searchItemLocal = (key: string): unknown => {
  * @function setItemLocal
  * @param key: string
  * @param item: any
- * @returns Item: any | false
+ * @returns unknown | boolean
  */
 export const setItemLocal = (key: string, item: any): unknown | boolean => {
   localStorage.setItem(key, JSON.stringify(item));
@@ -26,7 +26,7 @@ export const setItemLocal = (key: string, item: any): unknown | boolean => {
  * Quitar item del localStorage (Almacenamiento local)
  * @function removeItemLocal
  * @param key: string
- * @returns Item: any | null
+ * @returns unknown | boolean
  */
 export const removeItemLocal = (key: string): unknown | boolean => {
   const searchItem = searchItemLocal(key);
